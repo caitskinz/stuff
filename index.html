@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/favicon.png">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/favicon.png">
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/favicon.png">
     <title>Caitlin's Stuff</title>
     <style>
         body {
             background-color: #bc94eb;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
         h1 {
@@ -20,13 +24,15 @@
         }
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
         }
 
         .box {
-            width: 35%;
+            width: auto;
             height: auto;
             padding: 15px;
             padding-top: 5px;
@@ -44,10 +50,6 @@
             height: auto;
             border-radius: 5px;
             height: auto;
-        }
-
-        .box:hover {
-            transform: scale(1.1);
         }
 
         div a {
@@ -70,7 +72,6 @@
         }
 
         .button:hover {
-            transform: scale(1.1);
             background-color: #ed4cc5;
             color: #94eaf2;
         }
@@ -79,82 +80,125 @@
             font-size: 18px;
             font-weight: bold;
         }
+        
+        /* Responsive styles */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                padding: 16px;
+                width: auto;
+            }
+
+            .box img {
+                max-width: 70%;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 0 8px;
+            }
+
+            .container {
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .box {
+                padding: 10px;
+                margin-top: 8px;
+            }
+
+            .box img {
+                max-width: 80%;
+            }
+
+            .button {
+                width: auto;
+                padding: 10px 6px;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <h1>✨💖 My Stuff 💖✨</h1>
     <div class="container">
-        <a href="https://caitskinz.github.io/tarot/" target="_blank">
-            <div class="box">
-                <p class="title">Tarot Cards</p>
-                <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/moon.png"><br>
-                <a class="button" href="https://caitskinz.github.io/tarot/" target="_blank">Click me</a>
-            </div>
-        </a>
-        <a href="https://caitskinz.github.io/clawmachine/" target="_blank">
-            <div class="box">
-                <p class="title">Claw Machine</p>
-                <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/arcade.png"><br>
-                <a class="button" href="https://caitskinz.github.io/clawmachine/" target="_blank">Click me</a>
-            </div>
-        </a>
-        <a href="https://caitskinz.github.io/magic8ball/" target="_blank">
-            <div class="box">
-                <p class="title">Magic 8 Ball</p>
-                <img src="https://64.media.tumblr.com/9836ede8d3166fe1d930c530c2b77039/e2d62cd812d05f11-bb/s540x810/b2a482079002d570f3141e8f2ffc39396254e02a.pnj"><br>
-                <a class="button" href="https://caitskinz.github.io/magic8ball" target="_blank">Click me
-                </a>
-            </div>
-            <a href="https://caitskinz.github.io/chores" target="_blank">
-                <div class="box">
-                    <p class="title">Chore Wheel</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/broom.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/chores/" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Quotes</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/grave.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/StandenSayings" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Oscars</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/oscar.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/Oscars2026" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Food</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/burger.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/PubQuizEats" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Festival Bingo</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/bingo.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/ElectricAve26" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Wedding Bingo</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/wedding-ring.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/WeddingBingo" target="_blank">Click me
-                    </a>
-                </div>
-                <div class="box">
-                    <p class="title">Quiz</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/choose.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/QuizTime" target="_blank">Click me
-                    </a>
-                </div>
-                 <div class="box">
-                    <p class="title">Quiz Controller</p>
-                    <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/admin-panel.png"><br>
-                    <a class="button" href="https://caitskinz.github.io/QuizController" target="_blank">Click me
-                    </a>
-                </div>
+        <div class="box">
+            <p class="title">Tarot Cards</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/moon.png"><br>
+            <a class="button" href="https://caitskinz.github.io/tarot/" target="_blank">Click me</a>
+        </div>
+        <div class="box">
+            <p class="title">Claw Machine</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/arcade.png"><br>
+            <a class="button" href="https://caitskinz.github.io/clawmachine/" target="_blank">Click me</a>
+        </div>
+        <div class="box">
+            <p class="title">Magic 8 Ball</p>
+            <img
+                src="https://64.media.tumblr.com/9836ede8d3166fe1d930c530c2b77039/e2d62cd812d05f11-bb/s540x810/b2a482079002d570f3141e8f2ffc39396254e02a.pnj"><br>
+            <a class="button" href="https://caitskinz.github.io/magic8ball" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Chore Wheel</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/broom.png"><br>
+            <a class="button" href="https://caitskinz.github.io/chores/" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Quotes</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/grave.png"><br>
+            <a class="button" href="https://caitskinz.github.io/StandenSayings" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Oscars</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/oscar.png"><br>
+            <a class="button" href="https://caitskinz.github.io/Oscars2026" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Food</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/burger.png"><br>
+            <a class="button" href="https://caitskinz.github.io/PubQuizEats" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Festival Bingo</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/bingo.png"><br>
+            <a class="button" href="https://caitskinz.github.io/ElectricAve26" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Wedding Bingo</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/wedding-ring.png"><br>
+            <a class="button" href="https://caitskinz.github.io/WeddingBingo" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Quiz</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/choose.png"><br>
+            <a class="button" href="https://caitskinz.github.io/QuizTime" target="_blank">Click me
+            </a>
+        </div>
+        <div class="box">
+            <p class="title">Quiz Controller</p>
+            <img src="https://raw.githubusercontent.com/caitskinz/stuff/refs/heads/main/admin-panel.png"><br>
+            <a class="button" href="https://caitskinz.github.io/QuizController" target="_blank">Click me
+            </a>
+        </div>
 </body>
 
 </html>
